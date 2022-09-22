@@ -286,6 +286,7 @@ const second = [4, 5]
 console.log(nonMutatingConcat(first, second))
 
 // task15
+
 function getRating(watchList) {
   const newArr = watchList.filter(item => item.Director === "Christopher Nolan").map(item => {
     return {
@@ -296,3 +297,20 @@ function getRating(watchList) {
     return averageRating
   }
   console.log(getRating(watchList))
+
+//task16
+
+const squareList = arr => {
+    return arr.filter(number => number > 0 && Number.isInteger(number)).map(number => Math.pow(number , 2))
+  }
+  const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2])
+  console.log(squaredIntegers) 
+
+//task 17
+
+function alphabeticalOrder(arr) {
+    return arr.sort((a , b) => {
+        return a === b ? 0 : a > b ? 1 : -1;
+    })
+  }
+  console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]))
